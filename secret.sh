@@ -1,0 +1,8 @@
+export TW_AUTH_ID='AC10159e7c405c7a6d88b5435eae939da4'
+export TW_AUTH_TK='874adcdd50d4a591ce721de92594c9b9'
+export TW_PHONE_NO='+16504602229'
+export TS_PHONE_NO='+14157301468'
+export DB_NAME='db_cadenza'
+export DB_USER='cadenza_estrib'
+export DB_PASSWORD='!12dss15CJS!'
+export DJANGO_SECRET_KEY='+t05&*7^uwxw^8iu7(!tc3rnaoiq-znxvnr0&f%-*+thjo31a8'
