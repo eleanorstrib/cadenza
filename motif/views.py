@@ -6,6 +6,8 @@ def index(request):
 
 @twilio_view
 def sms_test(request):
-    r=Response()
-    r.message("thanks for your text :)")
+    name = request.POST.get('Body', '')
+    msg = "hi %s!!!" % (name)
+    r = Response()
+    r.message(msg)
     return r
