@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from twilio import twiml
 from django_twilio.decorators import twilio_view
 from twilio.twiml import Response
 
@@ -8,8 +9,6 @@ def index(request):
 
 @twilio_view
 def sms_test(request):
-    name = request.POST.get('Body', '')
-    msg = "hi %s!!!" % (name)
-    r = Response()
-    r.message(msg)
+    r = twiml.Response()
+    r.message("hello there!")
     return r
