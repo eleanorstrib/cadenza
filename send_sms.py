@@ -2,10 +2,10 @@ import os
 from twilio.rest import TwilioRestClient
 import twilio.twiml
 
-tw_sid = os.environ['TW_AUTH_ID']
-tw_auth = os.environ['TW_AUTH_TK']
-tw_phone = os.environ['TW_PHONE_NO']
-my_phone = os.environ['TS_PHONE_NO']
+tw_sid = os.environ['TWILIO_ACCOUNT_SID']
+tw_auth = os.environ['TWILIO_AUTH_TOKEN']
+tw_phone = os.environ['TWILIO_DEFAULT_CALLERID']
+my_phone = os.environ['TWILIO_TEST_PHONE']
 
 client = TwilioRestClient(tw_sid, tw_auth)
 
