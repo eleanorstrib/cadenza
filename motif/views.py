@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django_twilio.decorators import twilio_view
 
 def index(request):
     return(HttpResponse("index page!"))
