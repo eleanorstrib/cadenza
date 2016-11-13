@@ -8,7 +8,7 @@ def index(request):
     return(HttpResponse("index page!"))
 
 @twilio_view
-def sms_test(request):
-    r = twiml.Response()
+def sms(request):
+    r = Response()
     r.message("hello there!")
     return r
