@@ -4,8 +4,9 @@ import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
+HEROKU_APP_NAME = os.environ.get('cadenza-motif.herokuapp.com', '')
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [HEROKU_APP_NAME, 'localhost']
 
 INSTALLED_APPS = [
     'motif.apps.MotifConfig',
