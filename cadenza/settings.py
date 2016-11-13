@@ -16,7 +16,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_twilio',
 ]
 
 MIDDLEWARE = [
@@ -102,7 +101,6 @@ USE_TZ = True
 
 PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
 
-# DJANGO_TWILIO_FORGERY_PROTECTION = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
