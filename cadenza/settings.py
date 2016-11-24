@@ -4,7 +4,7 @@ import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['cadenza-motif.herokuapp.com', 'localhost']
 
@@ -101,7 +101,7 @@ USE_L10N = True
 USE_TZ = True
 
 PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
-DJANGO_TWILIO_FORGERY_PROTECTION = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
