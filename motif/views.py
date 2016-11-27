@@ -9,6 +9,6 @@ def index(request):
 
 @twilio_view
 def sms(request):
-    r = twiml.Response()
+    r = twilio.twiml.Response()
     r.message("hello there!")
     return r
