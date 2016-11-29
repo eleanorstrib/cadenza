@@ -9,7 +9,11 @@ def index(request):
 
 @twilio_view
 def sms(request):
-    msg = "hello there!"
+    user_msg = request.POST.get('Body', '')
+    if user_msg == ":)":
+        msg = "yay you're ", user_msg
+    else:
+        msg = "not happy?"
     r = twiml.Response()
     r.message(msg)
     return r
