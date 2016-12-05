@@ -10,7 +10,7 @@ def index(request):
 
 @twilio_view
 def sms(request):
-    user_msg = request.POST.get('Body', '')
+    user_msg = str(request.POST.get('Body', ''))
     msg = user_msg
     r = twiml.Response()
     r.message(msg)
