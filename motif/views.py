@@ -11,7 +11,10 @@ def index(request):
 @twilio_view
 def sms(request):
     user_msg = request.POST.get('Body', '')
-    msg = unicode(user_msg, 'utf-8')
+    if msg = ':smile:':
+        msg = user_msg
+    else:
+        msg = "hi there"
     r = twiml.Response()
     r.message(msg)
     return r
