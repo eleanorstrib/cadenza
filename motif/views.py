@@ -11,7 +11,7 @@ def index(request):
 @twilio_view
 def sms(request):
     user_msg = str(request.POST.get('Body', ''))
-    msg = user_msg
+    msg = unicode(user_msg, 'utf-8')
     r = twiml.Response()
     r.message(msg)
     return r
