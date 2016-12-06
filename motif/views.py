@@ -11,7 +11,10 @@ def index(request):
 @twilio_view
 def sms(request):
     user_msg = request.POST.get('Body', '')
-    msg = Emoji.replace(user_msg)
+    if user_msg == Emoji.replace(:smile:)
+        msg = "get happy!"
+    else:
+        msg = "No go"
     r = twiml.Response()
     r.message(msg)
     return r
