@@ -6,7 +6,7 @@ from django_twilio.decorators import twilio_view
 from emoji import Emoji
 
 def index(request):
-    return(HttpResponse("index page!"))
+    return render(request, '../templates/index.html', {})
 
 @twilio_view
 def sms(request):
