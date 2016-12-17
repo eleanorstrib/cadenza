@@ -9,13 +9,14 @@ DEBUG = False
 ALLOWED_HOSTS = ['cadenza-motif.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
-    'motif.apps.MotifConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'signup.apps.SignupConfig',
+    'motif.apps.MotifConfig',
     'django_twilio',
     'emoji',
     'rest_framework',
