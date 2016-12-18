@@ -5,6 +5,7 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 DEBUG = False
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 ALLOWED_HOSTS = ['mycadenza.io','cadenza-motif.herokuapp.com', 'localhost']
 
@@ -108,7 +109,7 @@ DJANGO_TWILIO_FORGERY_PROTECTION = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
