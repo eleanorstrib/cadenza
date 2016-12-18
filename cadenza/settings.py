@@ -6,7 +6,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 DEBUG = False
 
-ALLOWED_HOSTS = ['cadenza-motif.herokuapp.com', 'localhost']
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
+ALLOWED_HOSTS = ['mycadenza.io','cadenza-motif.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -37,7 +39,7 @@ ROOT_URLCONF = 'cadenza.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PROJECT_ROOT, 'templates').replace('\\','/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -108,13 +110,16 @@ DJANGO_TWILIO_FORGERY_PROTECTION = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     [os.path.join(BASE_DIR, 'static')]
 )
+print("STATICFILES_DIRS", STATICFILES_DIRS)
+print("STATIC_ROOT", STATIC_ROOT)
+print("templte dirs", TEMPLATES[0]['DIRS'])
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
