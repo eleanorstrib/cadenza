@@ -13,10 +13,7 @@ def index(request):
 @twilio_view
 def sms(request):
     user_msg = request.POST.get('Body', '')
-    if user_msg in Emoji:
-        msg = "Cadenza is an app that helps you track anything. Sign up at mycadenza.io"
-    else:
-        msg = "Thanks!  We recorded your message: %s" % user_msg
+    msg = "Thanks!  We recorded your message: %s" % user_msg
     r = twiml.Response()
     r.message(msg)
     return r
