@@ -1,6 +1,6 @@
-
 import os
 import dj_database_url
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'signup.apps.SignupConfig',
     'motif.apps.MotifConfig',
     'django_twilio',
+    'phonenumber_field',
     'emoji',
     'rest_framework',
 ]
