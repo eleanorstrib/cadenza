@@ -15,7 +15,7 @@ def sms(request):
     if um_text_only in Emoji.names():
         msg = "Thanks!  We recorded your message: %s" % user_msg
     else:
-        msg = "Oops - your input must be a single emoji"
+        msg = "Oops - your input must be a single emoji. You typed %s and the text only is %s" % (user_msg, um_text_only)
     r = twiml.Response()
     r.message(msg)
     return r
