@@ -11,11 +11,10 @@ def index(request):
 @twilio_view
 def sms(request):
     user_msg = request.POST.get('Body', '')
-    um_text_only = user_msg[1:-1] # removes ::
-    if um_text_only in Emoji.names():
+    if user_msg in Emoji.names():
         msg = "Thanks!  We recorded your message: %s" % user_msg
     else:
-        msg = "Oops - your input must be a single emoji. You typed %s and the text only is %s" % (user_msg, um_text_only)
+        msg = "Oops - your input must be a single emoji."
     r = twiml.Response()
     r.message(msg)
     return r
