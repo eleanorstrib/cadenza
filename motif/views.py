@@ -5,8 +5,6 @@ from twilio.twiml import Response
 from django_twilio.decorators import twilio_view
 from emoji import Emoji
 
-print(Emoji)
-
 def index(request):
     return render(request, 'motif/index.html', {})
 
