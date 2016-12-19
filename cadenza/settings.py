@@ -119,6 +119,7 @@ STATICFILES_DIRS = (
 )
 print("STATICFILES_DIRS", STATICFILES_DIRS)
 print("STATIC_ROOT", STATIC_ROOT)
-print("templte dirs", TEMPLATES[0]['DIRS'])
+print("tempalte dirs", TEMPLATES[0]['DIRS'])
+print(STATIC_ROOT, "/img/this.png")
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
