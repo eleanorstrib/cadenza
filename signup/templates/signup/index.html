@@ -3,4 +3,8 @@
 {% block title %} - motif {% endblock %}
 {% block content %}
   This is the signup page
+  <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign up</button>
+    </form>
 {% endblock %}

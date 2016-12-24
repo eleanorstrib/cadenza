@@ -7,12 +7,13 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 DEBUG = False
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['mycadenza.io','cadenza-motif.herokuapp.com', 'localhost']
 
 INSTALLED_APPS = [
+    'phonenumber_field',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -22,9 +23,9 @@ INSTALLED_APPS = [
     'signup.apps.SignupConfig',
     'motif.apps.MotifConfig',
     'django_twilio',
-    'phonenumber_field',
     'emoji',
     'rest_framework',
+    'sslserver',
 ]
 
 MIDDLEWARE = [
