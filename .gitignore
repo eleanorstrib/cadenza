@@ -5,3 +5,7 @@ db.sqlite3
 db_cadenza
 logfile
 test.py
+*.key
+*.pem
+*.log
+*.DS_Store
