@@ -7,7 +7,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['email', 'username', 'password']
+        fields = ['email', 'password']
 
 class ProfileForm(forms.ModelForm):
     class Meta:
