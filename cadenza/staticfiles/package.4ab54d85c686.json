@@ -1,0 +1,30 @@
+{
+  "name": "cadenza-node",
+  "version": "1.0.0",
+  "description": "pkg for cadenza",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eleanorstrib/cadenza.git"
+  },
+  "author": "eleanorstrib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eleanorstrib/cadenza/issues"
+  },
+  "homepage": "https://github.com/eleanorstrib/cadenza#readme"
+}
