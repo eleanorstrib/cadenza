@@ -2,9 +2,10 @@
 {% load staticfiles %}
 {% block title %} - motif {% endblock %}
 {% block content %}
-  This is the signup page
-  <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
+  This is the signup index page
+  <form method="POST" action="">{% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
         <button type="submit">Sign up</button>
-    </form>
+  </form>
 {% endblock %}

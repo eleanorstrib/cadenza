@@ -7,7 +7,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '')
 DEBUG = False
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = ['mycadenza.io','cadenza-motif.herokuapp.com', 'localhost']
@@ -110,7 +110,7 @@ USE_L10N = True
 USE_TZ = True
 
 PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
-DJANGO_TWILIO_FORGERY_PROTECTION = True
+DJANGO_TWILIO_FORGERY_PROTECTION = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
