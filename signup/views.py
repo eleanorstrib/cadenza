@@ -9,20 +9,20 @@ def index(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST)
         profile_form = ProfileForm(request.POST)
+        print(profile_form)
         if user_form.is_valid():
-            user_form.save()
             print("user form valid")
         else:
-            print(user_form)
+            print("user form didn't work", user_form)
         if profile_form.is_valid():
-            # profile_form.save()
+            user_form.save()
+            profile_form.user = request.user
+            profile_form.save()
             print("profile form valid")
-            return HttpResponse('form valid!')
         else:
             return HttpResponse('form not valid')
     else:
         user_form = UserForm
         profile_form = ProfileForm
 
-    return render(request, 'signup/index.html',
-        {'user_form': user_form, 'profile_form': profile_form})
+    return render(request, 'signup/index.html',{'user_form': user_form, 'profile_form': profile_form})

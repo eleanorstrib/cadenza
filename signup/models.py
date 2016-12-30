@@ -6,12 +6,8 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    mobile_phone = models.CharField(max_length=10, blank=True)
-    tracker_name = models.CharField(max_length=50, blank=True)
-
-    def __str__(self):
-        return self.username
-
+    mobile_phone = models.CharField(max_length=10)
+    tracker_name = models.CharField(max_length=50)
 
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
