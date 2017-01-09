@@ -7,4 +7,4 @@ from phonenumber_field.modelfields import PhoneNumberField
 class CadenzaUserForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = CadenzaUser
-        fields = UserCreationForm.Meta.fields + ('email', 'mobile', 'password', 'tracker_name')
+        fields = UserCreationForm.Meta.fields + ('email', 'username', 'mobile', 'tracker_name')

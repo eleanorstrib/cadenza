@@ -4,8 +4,7 @@
 {% block content %}
   This is the signup index page
   <form method="post" action="">{% csrf_token %}
-        {{ user_form.as_table }}
-        {{ profile_form.as_table }}
+        {{ form.as_table }}
         <button type="submit">Sign up</button>
   </form>
 {% endblock %}

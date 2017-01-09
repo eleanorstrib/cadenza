@@ -14,4 +14,4 @@ class CadenzaUser(AbstractUser):
                                 )
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['mobile']
+    REQUIRED_FIELDS = ['username', 'mobile']
