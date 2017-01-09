@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from .models import Profile
-from .forms import UserForm, ProfileForm
+from .models import CadenzaUser
+from .forms import CadenzaUserForm
 from django.http import HttpResponse
 
 

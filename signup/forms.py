@@ -1,15 +1,10 @@
 from django import forms
-from django.contrib.auth.models import User
-from .models import User, Profile
+from django.contrib.auth.forms import UserCreationForm
+from .models import CadenzaUser
 from phonenumber_field.modelfields import PhoneNumberField
 
 
-class UserForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ('username','email', 'password')
-
-class ProfileForm(forms.ModelForm):
-    class Meta:
-        model = Profile
-        fields = ('mobile_phone', 'tracker_name')
+class CadenzaUserForm(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
+        model = CadenzaUser
+        fields = UserCreationForm.Meta.fields + ('email', 'mobile', 'password', 'tracker_name')
