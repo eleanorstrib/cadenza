@@ -11,6 +11,8 @@ def index(request):
         if form.is_valid():
             form.save()
             return HttpResponse("success!")
+        else:
+            return HttpResponse("there was a problem saving the form")
     else:
         form = CadenzaUserForm()
 

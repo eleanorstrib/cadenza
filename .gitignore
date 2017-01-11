@@ -7,3 +7,4 @@ logfile
 test.py
 *.pem
 *.key
+*.DS_Store
