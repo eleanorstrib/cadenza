@@ -9,7 +9,7 @@ class CadenzaUser(AbstractUser):
     mobile = PhoneNumberField()
     tracker_name = models.CharField(
                                 max_length=50,
-                                default='My tracker',
+                                default='My first tracker',
                                 blank=True
                                 )
 
